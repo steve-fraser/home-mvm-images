@@ -8,7 +8,4 @@ RUN apt update &&  apt install -y nfs-common
 #     && cp rclone /usr/bin/ \
 #     && chown root:root /usr/bin/rclone \
 #     && chmod 755 /usr/bin/rclone
-ADD startup.sh /home/startup.sh
-ADD startup.service /etc/systemd/system/startup.service
-RUN systemctl daemon-reload
-RUN systemctl enable startup.service
+ADD startup.sh /etc/init.d/startup.sh
