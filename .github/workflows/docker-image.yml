@@ -21,5 +21,5 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag capmvm-kubernetes:${{ github.run_number }}
-    - name: Build the Docker image
-      run: docker push capmvm-kubernetes:${{ github.run_number }}
+    - name: push the Docker image
+      run: docker push ${{ secrets.DOCKER_USERNAME }}/capmvm-kubernetes:${{ github.run_number }}
