@@ -1,10 +1,8 @@
 [Unit]
-Description=Job that runs your user script
+Description=My custom startup script
 
 [Service]
-ExecStart=bash /home/startup.sh
-Type=oneshot
-RemainAfterExit=yes
+ExecStart=/etc/init.d/startup.sh
 
 [Install]
 WantedBy=multi-user.target
