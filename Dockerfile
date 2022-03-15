@@ -9,3 +9,4 @@ RUN apt update &&  apt install -y nfs-common
 #     && chown root:root /usr/bin/rclone \
 #     && chmod 755 /usr/bin/rclone
 ADD startup.sh /etc/init.d/startup.sh
+ADD chmod +x /etc/init.d/startup.sh
