@@ -7,4 +7,10 @@ cp -R /mnt/appdata/sonarr /home/sonarr
 cp -R /mnt/appdata/radarr /home/radarr
 cp -R /mnt/appdata/qbittorrent /home/qbittorrent
 cp -R /mnt/appdata/tautulli /home/tautulli
+
+chmod 777 -R /home/sonarr
+chmod 777 -R /home/radarr
+chmod 777 -R /home/qbittorrent
+chmod 777 -R /home/tautulli
+
 (crontab -l 2>/dev/null; echo "*/10 * * * * /bin/bash /etc/init.d/sync.sh") | crontab -
