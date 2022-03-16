@@ -25,3 +25,5 @@ jobs:
       run: docker build . --file Dockerfile.vod --tag ${{ secrets.DOCKER_USERNAME }}/capmvm-kubernetes-vod:${{ github.run_number }}
     - name: push the Docker image - home
       run: docker push ${{ secrets.DOCKER_USERNAME }}/capmvm-kubernetes-home:${{ github.run_number }}
+    - name: push the Docker image - vod
+      run: docker push ${{ secrets.DOCKER_USERNAME }}/capmvm-kubernetes-vod:${{ github.run_number }}
